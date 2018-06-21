@@ -26,11 +26,11 @@ f = open('rectangles/rectangles_train.amat', 'r')
 
 for line in f:
 	temp_dict={}
-	temp_list=line.split()
-	for element in temp_list:
-		element=float(element)
-	temp_answer=temp_list.pop()
-	temp_dict={'feature_data':temp_list,'answer':temp_answer}
+	temp_list_strings=line.split()
+	# [float(i) for i in lst]
+	temp_list_floats=[float(i) for i in temp_list_strings]
+	temp_answer=temp_list_floats.pop()
+	temp_dict={'feature_data':temp_list_floats,'answer':temp_answer}
 	data_list.append(temp_dict)
 
 f.close()
@@ -38,5 +38,7 @@ f.close()
 
 print "Length of features_list is ",len(data_list[0]['feature_data'])
 print "Number of training data elements is ",len(data_list)
+print "Making sure the feature data entries and answer are float:"
+print data_list[0]['feature_data'][0]+1.0
 
 
