@@ -1,11 +1,13 @@
 ################################################
 
-# A training script for rectangles training data located relative to where this file is kept at:
-# ./rectangles/rectangles_train.amat
+# A training script for rectangles training data.
 
-# I think this .amat file is simply text with spaces and new lines. Quoted from where I got the data:
+# I am pretty sure this .amat file is simply text with spaces and new lines.
+
+# I got the data from:
 # http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/RectanglesData 
 
+# From the site:
 # "Each archive contains two files -- a training (and validation) set and a test set. We
 # used the last 2000 examples of the training sets as validation sets for rectangles-images
 # and 200 for rectangles. In the case of SVMs, retrained the models with the entire set after
@@ -16,9 +18,7 @@
 
 ###############################################
 
-# Make sure I can open the file and then build a list of dictionaries: rectangles_data
-
-# rectangles_data = [dict1,dict2,...] where dict1={'feature_data':[list of 784],'answer':float}
+# data_list = [dict1,dict2,...] where dict1={'feature_data':[list of 784],'answer':float}
 
 data_list=[]
 
